@@ -22,7 +22,7 @@
 
   <ItemGroup>
     <Reference Include="Enterprisecoding.RPI.GPIO">
-      <HintPath>..\..\RPI.GPIO-master\Enterprisecoding.RPI.GPIO\bin\Debug\Enterprisecoding.RPI.GPIO.dll</HintPath>
+      <HintPath>libs\Enterprisecoding.RPI.GPIO.dll</HintPath>
     </Reference>
   </ItemGroup>
 
