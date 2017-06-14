@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Com.Enterprisecoding.RPI.GPIO;
 
 namespace WebAPIPi
 {
@@ -13,6 +14,17 @@ namespace WebAPIPi
     {
         public static void Main(string[] args)
         {
+            int result = WiringPi.Core.Setup();
+
+            if (result == -1)
+            {
+                Console.WriteLine("WiringPi init failed!");
+            }
+            else
+            {
+                Console.WriteLine("WiringPi init successful!");
+            }
+
             var host = new WebHostBuilder()
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
